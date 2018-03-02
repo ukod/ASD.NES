@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace ASD.NES.Core.Memory {
 
@@ -13,12 +12,16 @@ namespace ASD.NES.Core.Memory {
             set => data[address].Value = value;
         }
 
-        public Bank() {
+        internal static Bank Create(IMapper mapper)
+            => new Bank(mapper
+                .Select(r => Reserve.Instance.GetRange(r.Space, r.Start, r.Count, r.Times))
+                .SelectMany(c => c));
 
-        }
+        private Bank(IEnumerable<Cell> cellSequence)
+            => data = cellSequence.ToArray();
+    }
 
-        public static IMemory<byte> GetMemory() {
-
-        }
+    public interface IMemory<T> {
+        T this[int address] { get; set; }
     }
 }

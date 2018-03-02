@@ -14,7 +14,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASD.NES.WPF", "ASD.NES.WPF\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASD.NES.Core", "ASD.NES.Core\ASD.NES.Core.csproj", "{98D37A2A-2CA9-4FDE-A12E-7BA8BF9CCD9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASD.NES.Core.Memory", "ASD.NES.Core.Memory\ASD.NES.Core.Memory.csproj", "{18C22C48-6289-4316-A282-6CF52D852CB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASD.NES.Core.Memory", "ASD.NES.Core.Memory\ASD.NES.Core.Memory.csproj", "{18C22C48-6289-4316-A282-6CF52D852CB2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E0B75852-0F67-4EC3-8E3B-43CC64C9B421}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASD.NES.Core.Memory.Tests", "ASD.NES.Core.Memory.Tests\ASD.NES.Core.Memory.Tests.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,9 +38,16 @@ Global
 		{18C22C48-6289-4316-A282-6CF52D852CB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18C22C48-6289-4316-A282-6CF52D852CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18C22C48-6289-4316-A282-6CF52D852CB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8EDF4429-251A-416D-BB68-93F227191BCF} = {E0B75852-0F67-4EC3-8E3B-43CC64C9B421}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C20E0176-6845-4DDD-92C7-835C3F0703C6}
